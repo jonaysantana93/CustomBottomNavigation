@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library") version "8.12.2"
-    id("org.jetbrains.kotlin.android") version "2.2.10"
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -26,9 +26,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
     }
 
     viewBinding {

@@ -40,6 +40,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
     viewBinding {
         enable = true
     }
@@ -64,4 +68,18 @@ dependencies {
 
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.compose.ui:ui-viewbinding:1.9.0")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.jonay.custombottomnavigation"
+            artifactId = "custombottomnavigation"
+            version = "1.0.6"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }

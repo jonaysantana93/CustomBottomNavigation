@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.library") version "8.12.2"
+    id("org.jetbrains.kotlin.android") version "2.2.10"
 }
 
 android {
@@ -53,7 +53,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
-    implementation("androidx.compose.material3:material3:1.12.0")
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.compose.ui:ui-viewbinding:1.9.0")
 }

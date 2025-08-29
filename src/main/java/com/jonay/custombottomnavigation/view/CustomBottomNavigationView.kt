@@ -1,4 +1,4 @@
-package com.jonay.custombottomnavigation
+package com.jonay.custombottomnavigation.view
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,9 +11,9 @@ import android.widget.LinearLayout
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.core.content.ContextCompat
 import androidx.core.view.forEach
+import com.jonay.custombottomnavigation.R
 import com.jonay.custombottomnavigation.databinding.CustomBottomNavigationBinding
 import com.jonay.custombottomnavigation.databinding.CustomBottomNavigationItemBinding
-import com.jonay.custombottomnavigation.view.OnItemSelectedListener
 
 /***
  * Created by Jonay Adrián Santana González on 29/08/2025.
@@ -28,7 +28,8 @@ class CustomBottomNavigationView @JvmOverloads constructor(
     defStyleRes: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr, defStyleRes) {
 
-    private val binding: CustomBottomNavigationBinding = CustomBottomNavigationBinding.inflate(LayoutInflater.from(context), this, true)
+    private val binding: CustomBottomNavigationBinding = CustomBottomNavigationBinding.inflate(
+        LayoutInflater.from(context), this, true)
     private lateinit var listener: OnItemSelectedListener
     private val itemBindingMap: MutableMap<Int, CustomBottomNavigationItemBinding> = mutableMapOf()
     private var selectedItemID: Int = -1
@@ -126,5 +127,3 @@ class CustomBottomNavigationView @JvmOverloads constructor(
         selectedItemID = itemID
     }
 }
-
-

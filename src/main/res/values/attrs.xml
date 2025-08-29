@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomBottomNavigationView">
+        <attr name="menu" format="reference"/>
+        <attr name="colorItemSelector" format="reference"/>
+        <attr name="colorItemSelected" format="reference"/>
+        <attr name="colorItemUnselected" format="reference"/>
+    </declare-styleable>
+</resources>
